@@ -1,0 +1,31 @@
+{
+  "name": "homework-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "api": "nodemon --exec babel-node -w server.js server.js",
+    "start": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/annaleaschroeder/homework-express.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/annaleaschroeder/homework-express/issues"
+  },
+  "homepage": "https://github.com/annaleaschroeder/homework-express#readme",
+  "dependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.11.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4",
+    "parcel-bundler": "^1.12.4",
+    "uuid": "^8.3.0"
+  }
+}
