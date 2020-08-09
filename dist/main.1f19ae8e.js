@@ -123,6 +123,8 @@ console.log('I am runnung'); //Submit Name
 var inputName = document.querySelector('[data-js=inputName]');
 var buttonSubmit = document.querySelector('[data-js=buttonSubmit]');
 var targetNameList = document.querySelector('[data-js="studentList"]');
+var inputId = document.querySelector('[data-js=inputId]');
+var buttonShowEnergy = document.querySelector('[data-js="buttonShowEnergy"]');
 buttonSubmit.addEventListener('click', function () {
   fetch('http://localhost:4002/', {
     method: 'POST',
@@ -142,13 +144,13 @@ buttonSubmit.addEventListener('click', function () {
 var buttonShowStudents = document.querySelector('[data-js=buttonShowStudents]');
 var studentList = document.querySelector('[data-js="studentList"]');
 buttonShowStudents.addEventListener('click', function () {
-  fetch('http://localhost:4002/').then(function (res) {
+  fetch('http://localhost:4002/students').then(function (res) {
     return res.json();
   }).then(function (data) {
     targetNameList.innerHTML = '';
     data.students.forEach(function (student) {
       var el = document.createElement('li');
-      el.textContent = student;
+      el.innerText = student.name + '\n' + student.id;
       targetNameList.appendChild(el);
     });
   });
@@ -157,13 +159,25 @@ buttonShowStudents.addEventListener('click', function () {
 var buttonsEnergyPercentage = document.querySelectorAll('.btn-percent');
 buttonsEnergyPercentage.forEach(function (buttonEnergy) {
   buttonEnergy.addEventListener('click', function () {
-    console.log(buttonEnergy.dataset.js);
-    console.log(inputId.value);
+    var id = inputId.value;
+    var energylevel = buttonEnergy.dataset.js;
+    fetch('http://localhost:4002/energy', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        id: id,
+        energylevel: energylevel
+      })
+    }).then(function (res) {
+      return res.json();
+    }).then(function (data) {
+      return console.log(data);
+    });
   });
-});
-var inputId = document.querySelector('[data-js=inputId]'); // Submit individual energy-level
+}); // Submit individual energy-level
 
-var buttonShowEnergy = document.querySelector('[data-js="buttonShowEnergy"]');
 buttonShowEnergy.addEventListener('click', function () {
   console.log('inputId');
 }); // Evaluate and Show averagy and indiv enetgy-level
