@@ -123,13 +123,29 @@ console.log('I am runnung'); //Submit Name
 var inputName = document.querySelector('[data-js=inputName]');
 var buttonSubmit = document.querySelector('[data-js=buttonSubmit]');
 buttonSubmit.addEventListener('click', function () {
-  console.log(inputName.value);
+  fetch('http://localhost:4002/', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      name: inputName.value
+    })
+  }).then(function (res) {
+    return res.json();
+  }).then(function (data) {
+    return console.log(data.request.name);
+  });
 }); //Show and update list of students
 
 var buttonShowStudents = document.querySelector('[data-js=buttonShowStudents]');
 var studentList = document.querySelector('[data-js="studentList"]');
 buttonShowStudents.addEventListener('click', function () {
-  console.log('studentList');
+  fetch('http://localhost:4002/').then(function (res) {
+    return res.json();
+  }).then(function (data) {
+    return console.log(data);
+  });
 }); //Identify by ID
 
 var buttonsEnergyPercentage = document.querySelectorAll('.btn-percent');
@@ -175,7 +191,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59712" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64098" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
