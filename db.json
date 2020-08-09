@@ -31,18 +31,109 @@
   ],
   "energy": [
     {
-      "student-id": "7r6e0qprtzp7ez",
-      "name": "Caro",
-      "energy": 100,
-      "timestamp": "12:0001012020",
-      "post-id": "9qz59gf7zq7rüq3güt597z"
+      "studentID": "e73a13d1-0617-4a95-a9c8-3f7d9f79014a",
+      "energylevel": "100",
+      "timestamp": "Sun, 09 Aug 2020 18:20:28 GMT",
+      "postID": "3614d530-bf58-447c-bfb5-669f9f79e132",
+      "name": "Nina"
     },
     {
-      "student-id": "7r3zpuhf8zgu",
-      "name": "Anna",
-      "energy": 75,
-      "timestamp": "12:0001012020",
-      "post-id": "9838z9886pz"
+      "studentID": "e73a13d1-0617-4a95-a9c8-3f7d9f79014a",
+      "energylevel": "100",
+      "timestamp": "Sun, 09 Aug 2020 18:27:38 GMT",
+      "postID": "dc0dd9f2-aefc-444a-8091-a594cbf96159",
+      "name": "Nina"
+    },
+    {
+      "studentID": "e73a13d1-0617-4a95-a9c8-3f7d9f79014a",
+      "energylevel": "25",
+      "timestamp": "Sun, 09 Aug 2020 18:32:45 GMT",
+      "postID": "85fe7159-5696-4eb5-a34c-89af553a9ebd",
+      "name": "Nina"
+    },
+    {
+      "studentID": "e73a13d1-0617-4a95-a9c8-3f7d9f79014a",
+      "energylevel": "75",
+      "timestamp": "Sun, 09 Aug 2020 19:03:34 GMT",
+      "postID": "5b37fa5a-e38a-4ad0-8430-0afd5de69f3c",
+      "name": "Nina"
+    },
+    {
+      "studentID": "e73a13d1-0617-4a95-a9c8-3f7d9f79014a",
+      "energylevel": "100",
+      "timestamp": "Sun, 09 Aug 2020 19:07:24 GMT",
+      "postID": "0006a051-70aa-4180-aa58-61f34bde282f",
+      "name": "Nina"
+    },
+    {
+      "studentID": "e73a13d1-0617-4a95-a9c8-3f7d9f79014a",
+      "energylevel": "100",
+      "timestamp": "Sun, 09 Aug 2020 19:07:26 GMT",
+      "postID": "28b9c9e9-3261-4ce5-bf2c-f6e975b22cb2",
+      "name": "Nina"
+    },
+    {
+      "studentID": "e73a13d1-0617-4a95-a9c8-3f7d9f79014a",
+      "energylevel": "75",
+      "timestamp": "Sun, 09 Aug 2020 19:07:30 GMT",
+      "postID": "06dec46e-717e-4375-bae0-7d90987bba33",
+      "name": "Nina"
+    },
+    {
+      "studentID": "e73a13d1-0617-4a95-a9c8-3f7d9f79014a",
+      "energylevel": "25",
+      "timestamp": "Sun, 09 Aug 2020 19:07:35 GMT",
+      "postID": "814471b6-7726-40f6-82d2-0592ec60add1",
+      "name": "Nina"
+    },
+    {
+      "studentID": "e73a13d1-0617-4a95-a9c8-3f7d9f79014a",
+      "energylevel": "75",
+      "timestamp": "Sun, 09 Aug 2020 19:07:53 GMT",
+      "postID": "7142bad0-4ce6-4248-bd54-31bf2de9b7bb",
+      "name": "Nina"
+    },
+    {
+      "studentID": "e73a13d1-0617-4a95-a9c8-3f7d9f79014a",
+      "energylevel": "50",
+      "timestamp": "Sun, 09 Aug 2020 19:07:56 GMT",
+      "postID": "0826ac4a-2217-4f4b-8f64-63c8ea5dd012",
+      "name": "Nina"
+    },
+    {
+      "studentID": "e73a13d1-0617-4a95-a9c8-3f7d9f79014a",
+      "energylevel": "25",
+      "timestamp": "Sun, 09 Aug 2020 19:07:59 GMT",
+      "postID": "40d93673-cb27-4544-997f-e9b1c83add60",
+      "name": "Nina"
+    },
+    {
+      "studentID": "e73a13d1-0617-4a95-a9c8-3f7d9f79014a",
+      "energylevel": "100",
+      "timestamp": "Sun, 09 Aug 2020 19:08:02 GMT",
+      "postID": "1ed0f864-794c-4f37-ad33-82249e538c5c",
+      "name": "Nina"
+    },
+    {
+      "studentID": "e73a13d1-0617-4a95-a9c8-3f7d9f79014a",
+      "energylevel": "75",
+      "timestamp": "Sun, 09 Aug 2020 19:08:03 GMT",
+      "postID": "f1979b50-de8d-4408-844d-de0f8195e0df",
+      "name": "Nina"
+    },
+    {
+      "studentID": "e73a13d1-0617-4a95-a9c8-3f7d9f79014a",
+      "energylevel": "75",
+      "timestamp": "Sun, 09 Aug 2020 19:25:07 GMT",
+      "postID": "22c4d245-632f-4623-85e2-8107a4e24ac0",
+      "name": "Nina"
+    },
+    {
+      "studentID": "e73a13d1-0617-4a95-a9c8-3f7d9f79014a",
+      "energylevel": "100",
+      "timestamp": "Sun, 09 Aug 2020 19:25:35 GMT",
+      "postID": "46cdbde7-896a-452d-b10c-31e9382ead23",
+      "name": "Nina"
     }
   ]
 }
