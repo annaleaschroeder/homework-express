@@ -118,20 +118,20 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"main.js":[function(require,module,exports) {
-console.log("I am runnung"); //Submit Name
+console.log('I am runnung'); //Submit Name
 
-var inputName = document.querySelector("[data-js=inputName]");
-var buttonSubmit = document.querySelector("[data-js=buttonSubmit]");
+var inputName = document.querySelector('[data-js=inputName]');
+var buttonSubmit = document.querySelector('[data-js=buttonSubmit]');
 var targetNameList = document.querySelector('[data-js="studentList"]');
-var inputId = document.querySelector("[data-js=inputId]");
+var inputId = document.querySelector('[data-js=inputId]');
 var buttonShowEnergy = document.querySelector('[data-js="buttonShowEnergy"]'); // Evaluate and Show averagy and indiv energy-level
 
 var energyList = document.querySelector('[data-js="energyList"]');
-buttonSubmit.addEventListener("click", function () {
-  fetch("http://localhost:4002/", {
-    method: "POST",
+buttonSubmit.addEventListener('click', function () {
+  fetch('http://localhost:4002/students', {
+    method: 'POST',
     headers: {
-      "Content-Type": "application/json"
+      'Content-Type': 'application/json'
     },
     body: JSON.stringify({
       name: inputName.value
@@ -143,30 +143,29 @@ buttonSubmit.addEventListener("click", function () {
   });
 }); //Show and update list of students
 
-var buttonShowStudents = document.querySelector("[data-js=buttonShowStudents]");
-var studentList = document.querySelector('[data-js="studentList"]');
-buttonShowStudents.addEventListener("click", function () {
-  fetch("http://localhost:4002/students").then(function (res) {
+var buttonShowStudents = document.querySelector('[data-js=buttonShowStudents]');
+buttonShowStudents.addEventListener('click', function () {
+  fetch('http://localhost:4002/students').then(function (res) {
     return res.json();
   }).then(function (data) {
-    targetNameList.innerHTML = "";
+    targetNameList.innerHTML = '';
     data.students.forEach(function (student) {
-      var el = document.createElement("li");
-      el.innerText = student.name + "\n" + student.id;
+      var el = document.createElement('li');
+      el.innerText = student.name + '\n' + student.id;
       targetNameList.appendChild(el);
     });
   });
 }); //Identify by ID
 
-var buttonsEnergyPercentage = document.querySelectorAll(".btn-percent");
+var buttonsEnergyPercentage = document.querySelectorAll('.btn-percent');
 buttonsEnergyPercentage.forEach(function (buttonEnergy) {
-  buttonEnergy.addEventListener("click", function () {
+  buttonEnergy.addEventListener('click', function () {
     var id = inputId.value;
     var energylevel = buttonEnergy.dataset.js;
-    fetch("http://localhost:4002/energy", {
-      method: "POST",
+    fetch('http://localhost:4002/energy', {
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json"
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify({
         id: id,
@@ -180,14 +179,14 @@ buttonsEnergyPercentage.forEach(function (buttonEnergy) {
   });
 }); // Submit individual energy-level
 
-buttonShowEnergy.addEventListener("click", function () {
+buttonShowEnergy.addEventListener('click', function () {
   var id = inputId.value;
-  fetch("http://localhost:4002/energy/" + id).then(function (res) {
+  fetch('http://localhost:4002/energy/' + id).then(function (res) {
     return res.json();
   }).then(function (data) {
-    energyList.innerHTML = "";
-    var el = document.createElement("li");
-    el.innerText = "Dein Energy-Level ist: " + data.energylevel + "Das Level der anderen ist: " + data.other + "Zeit: " + data.timestamp;
+    energyList.innerHTML = '';
+    var el = document.createElement('li');
+    el.innerText = "\n        Dein Energy-Level ist: ".concat(data.energylevel, ". Das Level der anderen ist: ").concat(data.other, ". Zeit: ").concat(data.timestamp, ".");
     energyList.appendChild(el);
   });
 });
@@ -219,7 +218,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50098" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50725" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
