@@ -118,7 +118,35 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"main.js":[function(require,module,exports) {
+console.log('I am runnung'); //Submit Name
 
+var inputName = document.querySelector('[data-js=inputName]');
+var buttonSubmit = document.querySelector('[data-js=buttonSubmit]');
+buttonSubmit.addEventListener('click', function () {
+  console.log(inputName.value);
+}); //Show and update list of students
+
+var buttonShowStudents = document.querySelector('[data-js=buttonShowStudents]');
+var studentList = document.querySelector('[data-js="studentList"]');
+buttonShowStudents.addEventListener('click', function () {
+  console.log('studentList');
+}); //Identify by ID
+
+var buttonsEnergyPercentage = document.querySelectorAll('.btn-percent');
+buttonsEnergyPercentage.forEach(function (buttonEnergy) {
+  buttonEnergy.addEventListener('click', function () {
+    console.log(buttonEnergy.dataset.js);
+    console.log(inputId.value);
+  });
+});
+var inputId = document.querySelector('[data-js=inputId]'); // Submit individual energy-level
+
+var buttonShowEnergy = document.querySelector('[data-js="buttonShowEnergy"]');
+buttonShowEnergy.addEventListener('click', function () {
+  console.log('inputId');
+}); // Evaluate and Show averagy and indiv enetgy-level
+
+var energyList = document.querySelector('[data-js="energyList"]');
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -147,7 +175,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53938" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59712" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

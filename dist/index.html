@@ -9,12 +9,12 @@
   <script src="/styles.8986bff4.js"></script></head>
   <body>
     <form>
-      <input type="text">
-      <button>Submit</button>
+      <input data-js="inputName" type="text">
+      <button data-js="buttonSubmit" type="button">Submit</button>
     </form>
     <div>
-      <button>Show Students</button>
-      <ul>
+      <button data-js="buttonShowStudents">Show Students</button>
+      <ul data-js="studentList">
         <li>Student 1</li>
         <li>Student 1</li>
         <li>Student 1</li>
@@ -23,15 +23,15 @@
       </ul>
     </div>
     <form>
-      <input type="text">
-      <button>100%</button>
-      <button>75%</button>
-      <button>50%</button>
-      <button>25%</button>
+      <input data-js="inputId" type="text">
+      <button type="button" class="btn-percent" data-js="100">100%</button>
+      <button type="button" class="btn-percent" data-js="75">75%</button>
+      <button type="button" class="btn-percent" data-js="50">50%</button>
+      <button type="button" class="btn-percent" data-js="25">25%</button>
     </form>
     <div>
-      <button>Show Energy</button>
-      <ul>
+      <button data-js="buttonShowEnergy">Show Energy</button>
+      <ul data-js="energyList">
         <li></li>
         <li></li>
         <li></li>
