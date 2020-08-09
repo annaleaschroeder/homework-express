@@ -122,6 +122,7 @@ console.log('I am runnung'); //Submit Name
 
 var inputName = document.querySelector('[data-js=inputName]');
 var buttonSubmit = document.querySelector('[data-js=buttonSubmit]');
+var targetNameList = document.querySelector('[data-js="studentList"]');
 buttonSubmit.addEventListener('click', function () {
   fetch('http://localhost:4002/', {
     method: 'POST',
@@ -144,7 +145,12 @@ buttonShowStudents.addEventListener('click', function () {
   fetch('http://localhost:4002/').then(function (res) {
     return res.json();
   }).then(function (data) {
-    return console.log(data);
+    targetNameList.innerHTML = '';
+    data.students.forEach(function (student) {
+      var el = document.createElement('li');
+      el.textContent = student;
+      targetNameList.appendChild(el);
+    });
   });
 }); //Identify by ID
 
@@ -191,7 +197,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64098" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60294" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

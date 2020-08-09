@@ -2,6 +2,7 @@ console.log('I am runnung')
 //Submit Name
 const inputName = document.querySelector('[data-js=inputName]')
 const buttonSubmit = document.querySelector('[data-js=buttonSubmit]')
+const targetNameList = document.querySelector('[data-js="studentList"]')
 
 buttonSubmit.addEventListener('click', () => {
   fetch('http://localhost:4002/', {
@@ -20,7 +21,14 @@ const studentList = document.querySelector('[data-js="studentList"]')
 buttonShowStudents.addEventListener('click', () => {
   fetch('http://localhost:4002/')
     .then((res) => res.json())
-    .then((data) => console.log(data))
+    .then((data) => {
+      targetNameList.innerHTML = ''
+      data.students.forEach((student) => {
+        const el = document.createElement('li')
+        el.textContent = student
+        targetNameList.appendChild(el)
+      })
+    })
 })
 //Identify by ID
 const buttonsEnergyPercentage = document.querySelectorAll('.btn-percent')
