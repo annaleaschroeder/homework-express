@@ -28,4 +28,10 @@ router.patch('/', (req, res) => {
     .catch((error) => res.json(error))
 })
 
+router.delete('/', (req, res) => {
+  Student.remove({ _id: req.body._id })
+    .then((data) => res.json(data))
+    .catch((error) => res.json(error))
+})
+
 export default router
