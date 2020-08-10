@@ -1,10 +1,15 @@
-import express from 'express'
 import cors from 'cors'
-import db from './db.json'
-import { v4 as uuidv4 } from 'uuid'
-import fs from 'fs'
-import studentRoute from './routes/students'
+import express from 'express'
 import energyRoute from './routes/energy'
+import studentRoute from './routes/students'
+import mongoose from 'mongoose'
+
+mongoose
+  .connect('mongodb://localhost:27017/homework-express', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log('MongoDB Starrrrrt'))
 
 const server = express()
 

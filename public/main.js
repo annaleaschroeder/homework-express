@@ -15,7 +15,7 @@ buttonSubmit.addEventListener('click', () => {
     body: JSON.stringify({ name: inputName.value }),
   })
     .then((res) => res.json())
-    .then((data) => console.log(data.request.name))
+    .then((data) => console.log(data.name))
 })
 //Show and update list of students
 const buttonShowStudents = document.querySelector(
@@ -29,7 +29,7 @@ buttonShowStudents.addEventListener('click', () => {
       targetNameList.innerHTML = ''
       data.students.forEach((student) => {
         const el = document.createElement('li')
-        el.innerText = student.name + '\n' + student.id
+        el.innerText = student.name + '\n' + student._id
         targetNameList.appendChild(el)
       })
     })

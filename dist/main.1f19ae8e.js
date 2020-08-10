@@ -139,7 +139,7 @@ buttonSubmit.addEventListener('click', function () {
   }).then(function (res) {
     return res.json();
   }).then(function (data) {
-    return console.log(data.request.name);
+    return console.log(data.name);
   });
 }); //Show and update list of students
 
@@ -151,7 +151,7 @@ buttonShowStudents.addEventListener('click', function () {
     targetNameList.innerHTML = '';
     data.students.forEach(function (student) {
       var el = document.createElement('li');
-      el.innerText = student.name + '\n' + student.id;
+      el.innerText = student.name + '\n' + student._id;
       targetNameList.appendChild(el);
     });
   });
@@ -218,7 +218,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65442" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49507" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
