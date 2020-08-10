@@ -19,7 +19,13 @@ router.post('/', (req, res) => {
 })
 
 router.patch('/', (req, res) => {
-  Student.
+  Student.update(
+    { _id: req.body._id },
+    { $set: { name: req.body.newName } },
+    { new: true }
+  )
+    .then((updatedStudent) => res.json(updatedStudent))
+    .catch((error) => res.json(error))
 })
 
 export default router
