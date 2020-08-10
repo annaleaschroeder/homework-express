@@ -17,4 +17,9 @@ router.post('/', (req, res) => {
     .catch((error) => res.json(error))
   console.log('Ich hab einen post request bekommen')
 })
+
+router.patch('/', (req, res) => {
+  Student.
+})
+
 export default router

@@ -151,7 +151,7 @@ buttonShowStudents.addEventListener('click', function () {
     targetNameList.innerHTML = '';
     data.students.forEach(function (student) {
       var el = document.createElement('li');
-      el.innerText = student.name + '\n' + student._id;
+      el.innerText = student.name + '\n' + student.id;
       targetNameList.appendChild(el);
     });
   });
@@ -218,7 +218,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49507" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55027" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

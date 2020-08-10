@@ -29,7 +29,7 @@ buttonShowStudents.addEventListener('click', () => {
       targetNameList.innerHTML = ''
       data.students.forEach((student) => {
         const el = document.createElement('li')
-        el.innerText = student.name + '\n' + student._id
+        el.innerText = student.name + '\n' + student.id
         targetNameList.appendChild(el)
       })
     })
